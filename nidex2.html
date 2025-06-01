@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GARNI_GANG - Gaming News</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      color: #0ff;
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 0 0 10px #0ff;
+    }
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: center;
+      gap: 20px;
+    }
+    .news-card {
+      background-color: #222;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover {
+      transform: scale(1.03);
+    }
+    .news-image {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .news-content {
+      padding: 15px;
+    }
+    .news-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0ff;
+    }
+    .news-desc {
+      font-size: 15px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GARNI_GANG - Gaming News</h1>
+  </header>
+
+  <div class="news-container">
+    <div class="news-card">
+      <img class="news-image" src="https://placehold.co/300x170/000000/0ff?text=Game+News+1" alt="News Image 1" />
+      <div class="news-content">
+        <div class="news-title">GTA 6 Coming 2025</div>
+        <div class="news-desc">Rockstar finally announced GTA 6 will be released in 2025 with next-gen graphics.</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img class="news-image" src="https://placehold.co/300x170/000000/0ff?text=Game+News+2" alt="News Image 2" />
+      <div class="news-content">
+        <div class="news-title">Fortnite Chapter 5</div>
+        <div class="news-desc">Epic Games revealed Chapter 5 with new map, skins, and battle mechanics.</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img class="news-image" src="https://placehold.co/300x170/000000/0ff?text=Game+News+3" alt="News Image 3" />
+      <div class="news-content">
+        <div class="news-title">Call of Duty New Era</div>
+        <div class="news-desc">COD goes futuristic with new weapons, vehicles and multiplayer style.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
