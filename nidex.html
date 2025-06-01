@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GARNI_GANG - Gaming News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5em;
+      color: #00ffcc;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+    .news-container {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .news-card {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,255,204,0.3);
+    }
+    .news-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,204,0.6);
+    }
+    .news-title {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #00ffcc;
+    }
+    .news-content {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>🎮 GARNI_GANG - Latest Gaming News</header>
+  <div class="news-container">
+    <div class="news-card">
+      <div class="news-title">Cyberpunk 2077 2.0 Update Released</div>
+      <div class="news-content">The massive 2.0 patch for Cyberpunk 2077 introduces AI enhancements and new missions. Available now.</div>
+    </div>
+    <div class="news-card">
+      <div class="news-title">GTA VI Leak Sparks Fan Theories</div>
+      <div class="news-content">A recent leak hints at a dual-protagonist system and a 2025 release date. Rockstar has not confirmed.</div>
+    </div>
+    <div class="news-card">
+      <div class="news-title">Elden Ring DLC 'Shadow of the Erdtree'</div>
+      <div class="news-content">FromSoftware announced a new expansion for Elden Ring, promising fresh challenges and lore-rich content.</div>
+    </div>
+  </div>
+</body>
+</html>
