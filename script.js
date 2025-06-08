@@ -1,37 +1,25 @@
 
-function addNews() {
-  const title = document.getElementById('newsTitle').value;
-  const content = document.getElementById('newsContent').value;
-  if (title && content) {
-    const newsItem = { title, content };
-    let newsList = JSON.parse(localStorage.getItem("newsList")) || [];
-    newsList.push(newsItem);
-    localStorage.setItem("newsList", JSON.stringify(newsList));
-    renderNews();
-    document.getElementById('newsTitle').value = '';
-    document.getElementById('newsContent').value = '';
+const newsContainer = document.getElementById("newsContainer");
+
+function loadNews() {
+  const news = JSON.parse(localStorage.getItem("news")) || [];
+  if (newsContainer) {
+    newsContainer.innerHTML = "";
+    news.forEach((item, index) => {
+      const div = document.createElement("div");
+      div.className = "news-card";
+      div.innerHTML = \`
+        <h2>\${item.title}</h2>
+        <p>\${item.content}</p>
+      \`;
+      newsContainer.appendChild(div);
+    });
   }
 }
 
-function renderNews() {
-  const container = document.getElementById('news-container');
-  container.innerHTML = '';
-  const newsList = JSON.parse(localStorage.getItem("newsList")) || [];
-  newsList.forEach(news => {
-    const card = document.createElement('div');
-    card.className = 'news-card';
-    card.innerHTML = `<h3>${news.title}</h3><p>${news.content}</p>`;
-    container.appendChild(card);
-  });
+function changeLanguage() {
+  const lang = document.getElementById("languageSelect").value;
+  alert("Language switched to: " + lang);
 }
 
-function openAdmin() {
-  const panel = document.getElementById('admin-panel');
-  panel.style.display = panel.style.display === "none" ? "block" : "none";
-}
-
-function changeLanguage(lang) {
-  alert("Language changed to: " + lang + " (This is a demo — translations not implemented yet.)");
-}
-
-renderNews();
+window.onload = loadNews;

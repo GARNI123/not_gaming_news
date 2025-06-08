@@ -1,57 +1,54 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0e0e0e;
-  color: #fff;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111;
+  color: #fff;
 }
-
 header {
-  background: #1a1a1a;
-  padding: 10px 20px;
+  background: #1f1f1f;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-
-.logo {
-  font-size: 1.8rem;
-  color: #00ffd5;
-  animation: glow 1.5s infinite alternate;
+header h1 {
+  margin: 0;
 }
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00ffd5; }
-  to { text-shadow: 0 0 20px #00ffd5, 0 0 30px #00ffd5; }
-}
-
-nav ul {
-  list-style: none;
+.right-controls {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
 }
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a, select {
+select, button {
+  background: #2c2c2c;
   color: white;
-  background: none;
   border: none;
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  border-radius: 6px;
 }
-
-.news-container {
-  padding: 20px;
+main {
+  padding: 2rem;
 }
-
 .news-card {
-  background: #1f1f1f;
-  padding: 15px;
-  margin-bottom: 10px;
+  background: #222;
+  margin: 1rem 0;
+  padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00ffd5;
+  box-shadow: 0 0 15px #000000aa;
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a1a;
+  color: white;
 }

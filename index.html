@@ -3,41 +3,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Not Gaming News</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1 class="logo">GARNI_GANG</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#" onclick="openAdmin()">Admin Panel</a></li>
-        <li>
-          <select onchange="changeLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="fa">فارسی</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="zh">中文</option>
-            <option value="ar">العربية</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
+    <h1>Not Gaming News</h1>
+    <div class="right-controls">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="fa">فارسی</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+      </select>
+      <button onclick="location.href='login.html'">Admin Login</button>
+    </div>
   </header>
   <main>
-    <section class="news-container" id="news-container">
-      <!-- اخبار اینجا لود می‌شن -->
-    </section>
-    <section id="admin-panel" style="display:none;">
-      <h2>Admin Panel</h2>
-      <input type="text" id="newsTitle" placeholder="News Title" />
-      <textarea id="newsContent" placeholder="News Content"></textarea>
-      <button onclick="addNews()">Add News</button>
-    </section>
+    <section id="newsContainer"></section>
   </main>
+  <footer>
+    <p>&copy; 2025 Not Gaming News</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
